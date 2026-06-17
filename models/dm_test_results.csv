@@ -1,0 +1,4 @@
+horizon,model1,model2,dm_stat,pval,significance,better_model,interpretation
+1-day,XGBoost v6.3,Naive persistence,4.9003,1e-06,***,Naive,Naive significantly better
+3-day,XGBoost v6.3,Naive persistence,4.4571,8e-06,***,Naive,Naive significantly better
+7-day,XGBoost v6.3,Naive persistence,5.4559,0.0,***,Naive,Naive significantly better

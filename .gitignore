@@ -1,0 +1,101 @@
+# ── Python cache ──────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# ── Virtual environment ────────────────────────────────────────
+venv/
+env/
+.venv/
+ENV/
+
+# ── CRITICAL: Credentials and secrets ─────────────────────────
+.env
+*.env
+config/gdelt-bigquery.json
+config/secrets.yaml
+config/credentials*.json
+*credentials*.json
+*service_account*.json
+*bigquery*.json
+*.key
+*.pem
+
+# ── Data files (large / raw) ───────────────────────────────────
+data/raw/
+data/processed/geoviz_risk_dataset.csv
+data/processed/geoviz_risk_dataset_backup.csv
+data/processed/geoviz_oos_iran_pretrain.csv
+data/raw/acled/records.parquet
+data/raw/acled/sample_acled.json
+
+# ── Model binaries (large pkl files) ──────────────────────────
+models/*.pkl
+models/xgboost_*.pkl
+models/regime_classifier_7d_v3.pkl
+models/direction_classifier_7d.pkl
+models/xgboost_model.pkl
+models/xgboost_forecast.pkl
+models/xgboost_future_risk.pkl
+models/xgboost_dashboard*.pkl
+models/xgboost_v5.pkl
+models/xgboost_regime_classifier*.pkl
+
+# ── Keep these small model outputs (safe, needed) ─────────────
+!models/regime_classifier_7d_v3_features.json
+!models/best_params_v6.json
+!models/ablation_table.csv
+!models/paper_baselines.csv
+!models/granger_causality_results.csv
+!models/granger_causality_summary.txt
+!models/shap_importance_v6.csv
+!models/shap_importance_regime_classifier_v3.csv
+!models/shap_interactions_top20.csv
+!models/dm_test_results.csv
+!models/delong_test_results.csv
+!models/error_analysis_missed.csv
+!models/conformal_summary.csv
+!models/geographic_oos_results.csv
+
+# ── Large prediction CSVs (reproducible by running scripts) ───
+models/predictions_v6_*.csv
+models/conformal_predictions_*.csv
+models/oof_predictions_*.csv
+models/oos_iran_predictions.csv
+models/oos_iran_results.csv
+models/smote_oof_predictions.csv
+models/direction_classifier_results.csv
+
+# ── Generated figures ─────────────────────────────────────────
+models/*.png
+models/calibration_curve_v3.png
+models/regime_change_diagnostic.png
+models/fig8_stats_oos_iran.png
+
+# ── OS files ──────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+
+# ── IDE ───────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ── Logs ──────────────────────────────────────────────────────
+*.log
+logs/
+
+# ── Streamlit cache ───────────────────────────────────────────
+.streamlit/
+
+# ── Jupyter ───────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb

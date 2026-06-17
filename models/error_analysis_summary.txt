@@ -1,0 +1,28 @@
+
+========================================================
+PAPER-READY ERROR ANALYSIS PARAGRAPH
+========================================================
+
+Of the 51 regime change events in the OOF evaluation set,
+the classifier correctly identified 36 (71%) and
+missed 15 (29%). Missed escalations had a mean
+calibrated probability of 0.046, compared to 0.348
+for correctly identified events, indicating that missed events were
+genuinely ambiguous rather than confidently mis-classified.
+0 of the 15 missed events (0%) had
+probabilities between 0.10 and the 0.15 decision threshold — near-misses
+that a lower threshold would capture at the cost of additional false alarms.
+The remaining 15 missed events had probabilities
+below 0.10, suggesting they occurred in low-volatility windows where
+lagged conflict and market features gave no advance signal. This pattern
+is consistent with the single escalation cycle limitation: the classifier
+was trained on one major escalation period and may not generalise to
+structurally different conflict dynamics.
+
+Fold-level OOF results:
+  Fold 3 (5 train positives,  14 val positives): AUC = 0.689
+  Fold 4 (19 train positives, 42 val positives): AUC = 0.873
+  The wide gap between folds reflects the rarity of positives and
+  confirms that performance estimates carry high variance with ~56
+  total events. Bootstrap 95% CI [0.739, 0.878] accounts for this.
+========================================================
