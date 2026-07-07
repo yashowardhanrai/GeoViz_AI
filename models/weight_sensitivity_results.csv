@@ -1,0 +1,4 @@
+config,alpha,beta,gamma,delta,n_rows,n_pos,pos_rate,risk_mean,risk_std,auc,ci_lo,ci_hi
+Calibrated (paper),0.35,0.3,0.2,0.15,1171,204,0.1742,51.83,6.51,0.5579,0.5179,0.6029
+Equal weights,0.25,0.25,0.25,0.25,1171,181,0.1546,45.52,6.41,0.523,0.475,0.5765
+Conflict-dominant,0.5,0.25,0.15,0.1,1171,244,0.2084,58.2,7.62,0.5606,0.5187,0.6017
