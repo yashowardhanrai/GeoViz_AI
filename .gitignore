@@ -70,6 +70,10 @@ models/oos_iran_results.csv
 models/smote_oof_predictions.csv
 models/direction_classifier_results.csv
 
+# Whitelist small prediction files needed by the server
+!models/predictions_v6_3d.csv
+!models/oof_predictions_regime_classifier_7d_v3.csv
+
 # ── Generated figures ─────────────────────────────────────────
 models/*.png
 models/calibration_curve_v3.png

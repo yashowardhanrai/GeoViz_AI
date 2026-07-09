@@ -18,7 +18,9 @@ PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Go up one more to reach GeoVizAI root
 PROJECT_ROOT = os.path.dirname(PROJECT_ROOT)
 
-DATA_PATH = os.path.join(PROJECT_ROOT, "data", "processed", "geoviz_risk_dataset.csv")
+MINIMIZED_DATA_PATH = os.path.join(PROJECT_ROOT, "data", "processed", "geoviz_risk_dataset_minimized.csv")
+RAW_DATA_PATH = os.path.join(PROJECT_ROOT, "data", "processed", "geoviz_risk_dataset.csv")
+DATA_PATH = MINIMIZED_DATA_PATH if os.path.exists(MINIMIZED_DATA_PATH) else RAW_DATA_PATH
 MODELS_DIR = os.path.join(PROJECT_ROOT, "models")
 
 # Columns to keep (only columns needed by the dashboard, skipping huge text fields)
